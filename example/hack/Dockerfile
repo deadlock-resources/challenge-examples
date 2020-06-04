@@ -9,4 +9,4 @@ RUN mvn clean install
 # Move running jar in the parent folder
 RUN mv target/hack-sql-injection.jar .
 # Compile side-project sources
-CMD ["java", "-Xms32m", "-Xmx64m", "-jar", "hack-sql-injection.jar"]
+CMD ["./start.sh"]

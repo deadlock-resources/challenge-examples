@@ -6,5 +6,5 @@ type: HACKING
 xp:
   crackme: 1
 hacking:
-  index: /
+  index: ?callback=${CALLBACK}
   token_path: /usr/src/app/tokens

@@ -43,10 +43,16 @@ function kill() {
 }
 
 function buildCatsHtml(cats) {
-    $("#cats").empty();
-    cats.forEach((cat) => {
-        $("#cats").append(buildCatHtml(cat))
-    })
+    var catsDiv = $("#cats");
+    catsDiv.empty();
+    if(cats.length) {
+        cats.forEach((cat) => {
+            catsDiv.append(buildCatHtml(cat))
+        });
+    } else {
+        catsDiv.text("No cats found in the database");
+    }
+
 }
 
 function buildCatHtml(cat) {
@@ -91,8 +97,18 @@ function hideComments(catId) {
 
 function handleSuccess(token, catId) {
     if (token) {
-        $("#cats").empty();
-        $("#cats").text("Success ! Your token is: " + token);
+        var catsDiv = $("#cats");
+        catsDiv.empty();
+        catsDiv.text("No cats found in the database.");
+        catsDiv.append($("<div>").text("Success ! Your token is: " + token));
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var link = $("<a/>")
+          .text("Deadlock dashboard")
+          .attr("href", urlParams.get("callback") + '?token=' + token);
+        catsDiv.append("Now, you can go back to the <a href=")
+            .append(link)
+            .append(" and enter it to pass to the next step.")
     } else {
         fetchComments(catId);
     }
