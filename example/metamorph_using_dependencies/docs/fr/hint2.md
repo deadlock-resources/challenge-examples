@@ -1,0 +1,1 @@
+La chaîne en entrée est la représentation JSON d'un tableau d'entiers.

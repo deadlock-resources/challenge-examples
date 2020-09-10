@@ -21,3 +21,4 @@ You can find many examples within `example` folder.
 - Score
     - [Java](./example/code_score_java)
     - [Python](./example/code_score_python)
+- [Metamorph using dependencies](./example/metamorph_using_dependencies)
