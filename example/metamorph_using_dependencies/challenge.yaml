@@ -1,0 +1,21 @@
+version: 1.0
+name: metamorph_using_dependencies
+label: Metamorph challenge using dependencies
+description: Dummy example of a metamorph challenge using external dependencies.
+level: jarjarbinks
+type: CODING
+xp:
+  c: 1
+  cpp: 1
+  go: 1
+  java: 1
+  javascript: 1
+  kotlin: 1
+  python: 1
+  rust: 1
+  programming: 1
+coding:
+  templateDirectory: /opt/runner
+  successDirectory: src/success
+  target: Main.js
+  editorMode: javascript

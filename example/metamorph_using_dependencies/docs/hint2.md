@@ -1,0 +1,1 @@
+The input string is a JSON-formatted array of integers.

@@ -1,0 +1,1 @@
+To multiply array items without iterating over it, you could use a reduce operation.

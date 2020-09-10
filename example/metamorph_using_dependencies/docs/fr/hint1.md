@@ -1,0 +1,1 @@
+Pour multiplier les éléments d'un tableau sans itérer sur chacun d'eux, vous pourriez utiliser une opération de réduction.
